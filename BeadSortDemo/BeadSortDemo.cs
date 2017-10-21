@@ -21,8 +21,9 @@ namespace BeadSortDemo
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			Console.SetOut(new TextBoxWriter(textBox1));
-			Console.WriteLine("Gravity / Bead Sort Demo");
-			
+			textBox1.AppendText("Gravity / Bead Sort Demo");
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.Refresh();
 		}
 
 		private void Form1_Shown(object sender, EventArgs e)
@@ -33,50 +34,63 @@ namespace BeadSortDemo
 		private void RunSort()
 		{
 			int[] data = RandomList();
-			Console.WriteLine(sizeToSort);
-			
+			textBox1.AppendText(sizeToSort.ToString() + " beads");
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.Refresh();
+
 			//int[] data = { 586, 25, 58964, 8547, 119, 0, 78596 };
 
 			sizeToSort = data.Length - 1;
-			Console.Write("Unsorted beads:");
-			
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.AppendText("Unsorted beads:");
+			textBox1.AppendText(Environment.NewLine);
+
 			ShowBeads(data);
+			
 			BeadSort(ref data);
-			Console.Write("Sorted beads:");
-			
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.AppendText("Sorted beads:");
+			textBox1.AppendText(Environment.NewLine);
+
 			ShowBeads(data);
-			Console.WriteLine("---");
-			Console.WriteLine("Beads are sorted!");
-			
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.AppendText("---");
+			textBox1.AppendText(Environment.NewLine);
+			textBox1.AppendText("Beads are sorted!");
+			textBox1.AppendText(Environment.NewLine);
+
 		}
 
 		private void ShowBeads(int[] data)
 		{
-			string output = "";
+			string output = "[";
 			for (int i = 0; i <= sizeToSort; i++)
 			{
 				output += (data[i]);
-				output += (" ");
+				if (i != sizeToSort)
+				{
+					output += (", ");
+				}
 			}
-			textBox1.Text += output;
-
+			textBox1.AppendText(output + "]");
+			textBox1.Refresh();
 		}
 
 		private int[] RandomList()
 		{
 			int[] randomizedList = new int[sizeToSort];
 			int i;
-			Console.WriteLine("Randomizing list of " + sizeToSort + " integers");
 			Random rnd = new Random();
 			string output = "";
 			for (i = 0; i < sizeToSort; i++)
 			{
 				randomizedList[i] = rnd.Next(0, 65535);
-				output += randomizedList[i];
-				output += " ";
 			}
-			textBox1.Text += output;
-			
+
 			return randomizedList;
 		}
 
