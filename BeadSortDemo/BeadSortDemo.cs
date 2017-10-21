@@ -28,12 +28,15 @@ namespace BeadSortDemo
 
 			sizeToSort = data.Length - 1;
 			Console.Write("Unsorted beads:");
+			textBox1.Refresh();
 			ShowBeads(data);
 			BeadSort(ref data);
 			Console.Write("Sorted beads:");
+			textBox1.Refresh();
 			ShowBeads(data);
 			Console.WriteLine("---");
 			Console.WriteLine("Beads are sorted!");
+			textBox1.Refresh();
 		}
 
 		private void ShowBeads(int[] data)
@@ -44,6 +47,7 @@ namespace BeadSortDemo
 				Console.Write(" ");
 			}
 			Console.WriteLine();
+			textBox1.Refresh();
 		}
 
 		private int[] RandomList()
@@ -59,6 +63,7 @@ namespace BeadSortDemo
 				Console.Write(" ");
 			}
 			Console.WriteLine("");
+			textBox1.Refresh();
 			return randomizedList;
 		}
 
