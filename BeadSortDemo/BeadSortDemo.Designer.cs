@@ -35,24 +35,29 @@ namespace BeadSortDemo
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(12, 12);
+			this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.textBox1.Location = new System.Drawing.Point(0, 0);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(1383, 476);
+			this.textBox1.ReadOnly = true;
+			this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBox1.Size = new System.Drawing.Size(1407, 500);
 			this.textBox1.TabIndex = 0;
 			// 
-			// Form1
+			// BeadSortDemo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1407, 500);
 			this.Controls.Add(this.textBox1);
-			this.Name = "Gravity / Bead Sort Demo";
+			this.DoubleBuffered = true;
+			this.Name = "BeadSortDemo";
 			this.Text = "Gravity / Bead Sort Demo";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
+			this.Shown += new System.EventHandler(this.Form1_Shown);
 		}
 
 		#endregion

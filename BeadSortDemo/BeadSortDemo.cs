@@ -12,7 +12,7 @@ namespace BeadSortDemo
 {
 	public partial class BeadSortDemo : Form
 	{
-		public int sizeToSort = 1000000;
+		public int sizeToSort = 1000;
 		public BeadSortDemo()
 		{
 			InitializeComponent();
@@ -22,32 +22,44 @@ namespace BeadSortDemo
 		{
 			Console.SetOut(new TextBoxWriter(textBox1));
 			Console.WriteLine("Gravity / Bead Sort Demo");
+			
+		}
+
+		private void Form1_Shown(object sender, EventArgs e)
+		{
+			RunSort();
+		}
+
+		private void RunSort()
+		{
 			int[] data = RandomList();
 			Console.WriteLine(sizeToSort);
+			
 			//int[] data = { 586, 25, 58964, 8547, 119, 0, 78596 };
 
 			sizeToSort = data.Length - 1;
 			Console.Write("Unsorted beads:");
-			textBox1.Refresh();
+			
 			ShowBeads(data);
 			BeadSort(ref data);
 			Console.Write("Sorted beads:");
-			textBox1.Refresh();
+			
 			ShowBeads(data);
 			Console.WriteLine("---");
 			Console.WriteLine("Beads are sorted!");
-			textBox1.Refresh();
+			
 		}
 
 		private void ShowBeads(int[] data)
 		{
+			string output = "";
 			for (int i = 0; i <= sizeToSort; i++)
 			{
-				Console.Write(data[i]);
-				Console.Write(" ");
+				output += (data[i]);
+				output += (" ");
 			}
-			Console.WriteLine();
-			textBox1.Refresh();
+			textBox1.Text += output;
+
 		}
 
 		private int[] RandomList()
@@ -56,14 +68,15 @@ namespace BeadSortDemo
 			int i;
 			Console.WriteLine("Randomizing list of " + sizeToSort + " integers");
 			Random rnd = new Random();
+			string output = "";
 			for (i = 0; i < sizeToSort; i++)
 			{
-				randomizedList[i] = rnd.Next(0, byte.MaxValue);
-				Console.Write(randomizedList[i]);
-				Console.Write(" ");
+				randomizedList[i] = rnd.Next(0, 65535);
+				output += randomizedList[i];
+				output += " ";
 			}
-			Console.WriteLine("");
-			textBox1.Refresh();
+			textBox1.Text += output;
+			
 			return randomizedList;
 		}
 
