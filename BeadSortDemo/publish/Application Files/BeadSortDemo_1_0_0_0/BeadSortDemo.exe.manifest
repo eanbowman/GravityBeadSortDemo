@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="BeadSortDemo.exe" version="1.0.0.0" publicKeyToken="4078b3348167d0a5" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="BeadSortDemo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="BeadSortDemo.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BeadSortDemo.exe" size="11704">
+      <assemblyIdentity name="BeadSortDemo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ADhMX8SXGhETfcxFcbXCHtJulX5sU1G8+XhzV/tRAB0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="BeadSortDemo.exe.config" size="186">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1NgAxCSw4ibTXzWVy7D6Rw60Qih4Dn37KvGhG5Ora/s=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=HEDGEHOG\edge_" issuerKeyHash="89eeb99598efc74fb80bc2cbd5397aa7650cedb9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>dFOlkqJj4Xl36SDiIJcvLKp3LwYhFJzL2oSUTbA5Aak=</DigestValue></Reference></SignedInfo><SignatureValue>GcaTx2/8sBj7Oj4ypaKbbyF8tJ5WgWChakoAAKQybljLbPAVDkOWBhGaeRTT9zPgttrI+3iDb67KPGSuAVrIafiVV2WIqj2whz0blcySreCzzrw7tfzm1+NsStp6jmED0WDIkFXqcz5eOQfHRy67hqF3/bXU7r830V8H3znFlMs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>7T34xrbdxRHk55lpW983CmuR/RlN+sX8yVTWa4uE5e58r7v1uQXOuTiAj9tm00nsPfBZSbkDGXuArrbuDpKUKlBVQoC2HYtQwLbmQiAXjGTkQeWQga8cvwRsTo1j2dvqmRYxbHoL2n3rt5EdhxCyDPrW5SD5/nbAXEiPvJ9ehHU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="a90139b04d9484dacb9c1421062f77aa2c2f9720e220e97779e163a292a55374" Description="" Url=""><as:assemblyIdentity name="BeadSortDemo.exe" version="1.0.0.0" publicKeyToken="4078b3348167d0a5" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=HEDGEHOG\edge_</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>+6qUrA7RflghSe9QRs/fVUHa+k2Dn6qugUfpHN6/+2g=</DigestValue></Reference></SignedInfo><SignatureValue>4i/nvV67Hz8XRQ0gWpJWHAw2cvpLWUCgZXaIKRWWIudwHuptUjYDFF3+z/li5nDcA8D/HoKei1xgYiualzmIvXibp/o9hyEIreX3wG6B8CUSxeElj3O86XYuINLQBeCUAWcbhqFGZ4evx6GQP6+fI0N7hObrzD2ZqbrPNYIBGDY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>7T34xrbdxRHk55lpW983CmuR/RlN+sX8yVTWa4uE5e58r7v1uQXOuTiAj9tm00nsPfBZSbkDGXuArrbuDpKUKlBVQoC2HYtQwLbmQiAXjGTkQeWQga8cvwRsTo1j2dvqmRYxbHoL2n3rt5EdhxCyDPrW5SD5/nbAXEiPvJ9ehHU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQGuYVt8QKa5lJt20SZr/rfjANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwASABFAEQARwBFAEgATwBHAFwAZQBkAGcAZQBfMB4XDTE3MTAyMTA0MzQ1OFoXDTE4MTAyMTEwMzQ1OFowJzElMCMGA1UEAx4cAEgARQBEAEcARQBIAE8ARwBcAGUAZABnAGUAXzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA7T34xrbdxRHk55lpW983CmuR/RlN+sX8yVTWa4uE5e58r7v1uQXOuTiAj9tm00nsPfBZSbkDGXuArrbuDpKUKlBVQoC2HYtQwLbmQiAXjGTkQeWQga8cvwRsTo1j2dvqmRYxbHoL2n3rt5EdhxCyDPrW5SD5/nbAXEiPvJ9ehHUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBbOEsnzhcYmHLvQsmsPQ4iycuDqKOrYYay7GWZg8vSPTXZnbwKEZZGaP4/h1qv7fxxRbSTVRBJ+7B13jgEkrE15bQSAooqSguz+zH8g3sYGms7lqU0y2bSswmz7UY1kDVwJhUAyDrc+VIoqtoaGi+KDWVInBhXbe6G3B81oH9wMw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
